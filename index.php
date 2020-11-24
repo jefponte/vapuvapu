@@ -35,7 +35,7 @@ if(isset($_POST['form-enviar'])){
         $stmt->binParam(":razaoSocial",$razaoSocial, PDO::PARAM_STR);
         $stmt->binParam(":email", $email, PDO::PARAM_STR);
         $stmt->binParam(":senha", $senha, PDO::PARAM_STR);
-        $resultado = $conexao->execute();    
+        $resultado = $stmt->execute();    
         if($resultado){
             echo "Inserido com sucesso";
         }else{
